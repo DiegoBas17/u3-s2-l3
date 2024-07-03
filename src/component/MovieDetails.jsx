@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Container } from "react-bootstrap";
+import { Container, Image, Placeholder } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import CommentsFilm from "./CommentsFilm";
 
@@ -29,8 +29,8 @@ const MovieDetails = () => {
   }, []);
   return (
     <Container>
-      <h1>{objFilm.Title}</h1>
-      <img src={objFilm.Poster} alt="" />
+      <Placeholder animation="glow">{objFilm.Title}</Placeholder>
+      <Image src={objFilm.Poster} alt="" thumbnail />
       <p>{`Data di uscita:${objFilm.Released}`}</p>
       <p>{`Genere:${objFilm.Genre}`}</p>
       <p>{`Durata:${objFilm.Runtime}`}</p>
